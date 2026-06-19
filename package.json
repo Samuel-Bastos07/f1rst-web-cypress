@@ -1,0 +1,25 @@
+{
+  "name": "desafioF1rst",
+  "version": "1.0.0",
+  "license": "ISC",
+  "main": "e2e.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:report": "cypress run && start cypress\\reports\\relatorio.html"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^14.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "cypress": "^11.2.0",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-xpath": "^2.0.1",
+    "esbuild": "^0.17.19"
+  },
+  "dependencies": {
+    "cypress-real-events": "^1.13.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/features/**/*.steps.js"
+  }
+}
